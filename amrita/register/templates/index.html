@@ -1,0 +1,55 @@
+{%  extends 'base.html' %}
+<!DOCTYPE html>
+{% load staticfiles %}
+{%  block body %}
+
+<body style="background-image: url( {% static 'hello.jpg' %})">
+<!--<nav class="navbar navbar-default">-->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <div class= "panel panel-success">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Login</div>
+            <div class="panel-body">
+            </div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+                </div>
+                <br>
+                <br>
+                <!-- <div class="alert alert-danger" role="alert">
+             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+             <span class="sr-only">Error:</span>
+             Enter a valid email address
+           </div>-->
+                <br>
+                <div class="form-group">
+                    <label class="sr-only" for="exampleInputPassword3">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <br>
+                    <br>
+                </div>
+
+                <button type="submit" class="btn btn-default">Sign in</button>
+
+                <br>
+            </form>
+        </div>
+</body>
+{% endblock body %}
+</html>

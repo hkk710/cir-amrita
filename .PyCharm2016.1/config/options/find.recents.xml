@@ -1,0 +1,9 @@
+<application>
+  <component name="FindRecents">
+    <findStrings>
+      <find>lo</find>
+      <find>login</find>
+      <find>nav</find>
+    </findStrings>
+  </component>
+</application>

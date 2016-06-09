@@ -1,0 +1,44 @@
+{%  extends 'base.html' %}
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load register_extras %}
+{%  block body %}
+<body style="background-image: url( {% static 'hello.jpg' %})">
+<div class="col-md-8 col-md-offset-2 well">
+<table class="table table-hover table-bordered table-responsive">
+    <thead>
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Manufacturer
+        </th>
+        <th>
+            Price
+        </th>
+        <th>
+            More
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for item in object_list %}
+        <tr>
+            <td> {{ item.name }} </td>
+            <td> {{ item.description }}</td>
+            <td> {{ item.manufacturer }}</td>
+            <td> {{ item.price }}</td>
+            <td> <a href="{% url 'chocolate_info' item.id %}">Info</a> </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</div>
+
+</body>
+{% endblock body %}
+</html>
